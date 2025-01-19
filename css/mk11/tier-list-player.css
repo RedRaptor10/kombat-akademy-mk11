@@ -1,0 +1,62 @@
+/* Tier List Information */
+#tier-list-info {
+	width: 50%;
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+/* Tier Lists Container */
+#tier-lists-container {
+	background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://www.kombatakademy.com/wp-content/uploads/mortal-kombat-11/tier-maker/ultimate-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgb(0,0,0);
+	width: 50%;
+	margin: 18px auto 18px auto;
+	border: var(--tier-list-border);
+}
+
+/* Tier Lists Player Container */
+#tier-lists-player-container {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgb(0,0,0);
+	width: 50%;
+	margin: 18px auto 18px auto;
+	border: var(--tier-list-border);
+}
+
+#tier-lists-container #tier-list-description, #tier-lists-player-container #tier-list-description {
+	display: unset;
+}
+
+#tier-lists-container .tier img, #tier-lists-player-container .tier img {
+	width: calc(90px * .75);
+	height: calc(120px * .75);
+	vertical-align: middle;
+	cursor: unset;
+}
+#tier-lists-container .tier img:hover, #tier-lists-player-container .tier img:hover { filter: unset; }
+
+/* Tier Lists Player Info */
+#tier-lists-player-info {
+	background: rgb(12,12,12);
+	text-align: center;
+	width: 25%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid rgb(64,64,64);
+}
+
+.customify-grid { margin: 0; }
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+	#tier-lists-info { width: unset; }
+	#tier-lists-container, #tier-lists-player-container { width: 100%; }
+	#tier-lists-container .tier img, #tier-lists-player-container .tier img {
+		width: 25%;
+		height: auto;
+	}
+	#tier-lists-player-info { width: 100%; }
+}

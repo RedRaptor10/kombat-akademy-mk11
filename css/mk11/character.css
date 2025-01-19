@@ -1,0 +1,148 @@
+/*
+*****
+INDEX
+*****
+- Table of Contents
+- Character
+- Strengths & Weaknesses
+- Key Moves
+*/
+
+/* Table of Contents */
+#toc_char_container {
+	display: table;
+	position: relative;
+	background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+	border: var(--border);
+	float: left;
+	padding: 18px;
+	width: calc(100% / 3);
+	box-sizing: border-box;
+	z-index: 1;
+}
+.toc_char_title {
+	text-align: center;
+	color: rgb(192, 192, 192);
+	font-weight: bold;
+}
+#toc_char_container p, #toc_char_container li, #toc_char_container ul, #toc_char_container ul li {
+	list-style: outside none none !important;
+}
+#toc_char_container ul {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+#toc_char_container li { margin: unset; }
+
+/* Character */
+#character {
+	width: calc(100% - (100% / 3));
+	height: auto;
+	z-index: 0;
+}
+#mk11_mugshot {
+	float: left;
+	width: auto;
+	padding-right: 12px;
+}
+
+#mk11_bio {
+	font-style: italic;
+	font-size: 16px;
+}
+
+/* Strengths & Weaknesses */
+#mk11_strweak {
+	display: flex;
+	margin-bottom: 20px;
+}
+#mk11_strweak table {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+#mk11_strweak table tr { border: 1px solid rgb(64, 64, 64); }
+#mk11_strweak table th {
+	width: 50%;
+	background: rgba(63, 0, 8, 0.75);
+	color: rgb(196, 196, 196);
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	padding: 10px 10px;
+	vertical-align: top;
+	text-align: center;
+}
+#mk11_strweak table td {
+	width: 50%;
+	color: rgb(196, 196, 196);
+	border: none;
+	padding: 10px 10px;
+	vertical-align: top;
+}
+
+#mk11_strweak table ul {
+	width: 75%;
+	margin-top: unset;
+	margin-bottom: unset;
+	margin-left: auto;
+	margin-right: auto;
+}
+#mk11_strweak table li {
+	margin: unset;
+}
+
+/* Key Moves */
+#mk11_keymoves {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+}
+
+#mk11_keymoves tr { border: 1px solid #404040; }
+#mk11_keymoves tr:first-child {
+	background: rgba(63, 0, 8, 0.75);
+	font-size: 16px;
+	font-weight: bold;
+}
+#mk11_keymoves th, #mk11_keymoves td {
+	color: #C0C0C0;
+	border: none;
+	padding: 10px 10px;
+}
+#mk11_keymoves td:first-child, #mk11_keymoves td:nth-child(2) {
+	width: 20%;
+}
+#mk11_keymoves td:last-child { width: 60%; }
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+	/* Table of Contents */
+	#toc_char_container {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	/* Character */
+	#character {
+		width: unset;
+	}
+
+	#mk11_mugshot {
+		float: none;
+		padding: 0;
+		margin: 12px;
+	}
+
+	#mk11_mugshot img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Strengths & Weaknesses */
+	#mk11_strweak table, #mk11_strweak table ul { width: 100%; }
+	#mk11_strweak table td { padding: 10px 30px; }
+}

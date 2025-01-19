@@ -1,0 +1,178 @@
+/*
+*****
+INDEX
+*****
+- Root
+- Variation
+- Combo List Container
+- Category
+- Combos
+--- Damage
+--- Description
+--- Tags
+- Mobile
+*/
+
+/* Root */
+:root {
+	--mk11-combos-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Variation */
+#variation { height: 500px; }
+
+/* Combo List Container */
+#combo-list-container {
+	background: rgba(0,0,0,.75);
+	padding-left: 4px;
+	padding-right: 4px;
+	border: 1px solid rgb(64,64,64);
+}
+
+/* Category */
+#combo-category-container {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(8, 21, 29, 0.75), rgba(0, 0, 0, 0.75));
+	text-align: center;
+	font-family: var(--mk11-combos-font);
+	padding: 4px;
+	border-bottom: 1px solid #393431;
+}
+.combo-category {
+	color: rgb(40,51,61);
+	font-size: 18px;
+	margin-left: 64px;
+	margin-right: 64px;
+}
+.combo-category:hover:not(.active) {
+	color: rgb(255,255,255);
+	text-shadow: 0 0 32px rgba(246,220,133,.75);
+	cursor: pointer;
+}
+.active {
+	color: rgb(255,255,255);
+	text-shadow: 0 0 32px rgba(246,220,133,.75);
+	cursor: default;
+}
+
+/* Combos */
+#combo-list {
+	color: rgb(192,192,192);
+	font-family: var(--mk11-combos-font);
+	font-size: 16px;
+	width: 100%;
+	border-spacing: 0 4px;
+	border-collapse: separate;
+	overflow: auto;
+}
+#combo-list td {
+	display: flex;
+	align-items: center;
+	background: linear-gradient(to right, rgba(15,15,15,.75), rgba(18,18,18,.75) 10%, rgba(18,18,18,.75) 50%, rgba(18,18,18,.75) 90%, rgba(15,15,15,.75));
+	padding: 5px 15px;
+	border: 1px solid rgb(64,64,64);
+	cursor: default;
+}
+#combo-list td:hover:not(.subcategory) {
+	background: linear-gradient(to right, rgba(110,87,43,.75), rgba(122,92,58,.75), rgba(110,87,43,.75));
+	border: 1px solid #B9A282;
+}
+#combo-list .left { max-width: 74%; }
+#combo-list .right {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+/* Damage */
+#combo-list .damage {
+	text-align: right;
+	color: rgb(255,255,255);
+	text-shadow: 1px 1px rgb(0,0,0);
+}
+
+/* Description */
+#combo-list .description {
+	font-style: italic;
+	font-size: 12px;
+	padding-top: 4px;
+}
+
+/* Tags */
+#tag-list {
+	display: flex;
+	justify-content: center;
+	font-size: 12px;
+	padding: 12px;
+}
+.combo-tags {
+	font-size: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.combo-tag {
+	display: inline-block;
+	background: var(--mk11-primary-color);
+	color: rgb(255,255,255);
+	padding: 4px;
+	border-radius: 4px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+#tag-list .combo-tag:hover { cursor: pointer; }
+.combo-tag:not(:last-child) { margin-right: 4px; }
+#combo-list .subcategory {
+	background: none;
+	color: var(--mk11-primary-color);
+	font-size: 18px;
+	padding-left: 0px;
+	border: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+	/* Variation */
+	#variation { height: unset !important; }
+	.variation-character {
+		display: block !important;
+		width: unset !important;
+		height: 300px !important;
+		background-position-x: center !important;
+	}
+	.variation-abilities {
+		display: unset !important;
+		width: unset !important;
+	}
+
+	/* Category */
+	#combo-category-container { display: block; }
+	.combo-category {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	/* Tags */
+	#tag-list { flex-wrap: wrap; }
+	#tag-list .combo-tag { margin-top: 4px; }
+
+	/* Combos */
+	#combo-list td {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#combo-list .combo { line-height: 2.5; }
+	#combo-list .description { padding-top: 8px; }
+	#combo-list .left { max-width: initial; }
+	#combo-list .right {
+		width: 100%;
+		padding-top: 4px;
+	}
+	#combo-list .tags {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#combo-list .tag { margin-top: 4px; }
+	#combo-list .damage { margin-left: auto; }
+}

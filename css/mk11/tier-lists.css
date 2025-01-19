@@ -1,0 +1,45 @@
+#tier-lists-results-title { text-align: center; }
+
+#tier-lists-results-info {
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+#tier-lists-results {
+	table-layout: fixed;
+	margin-bottom: 32px;
+}
+	#tier-lists-results th {
+		background: rgb(16,16,16);
+		color: rgb(192,192,192);
+		padding: 10px;
+	}
+	#tier-lists-results th:first-child { width: 40%; }
+	#tier-lists-results th:nth-child(2),
+		#tier-lists-results th:nth-child(3),
+			#tier-lists-results th:nth-child(4) {
+				width: 20%;
+				border-left: 0;
+			}
+	#tier-lists-results td {
+		background: rgba(32,32,32,.25);
+		padding: 10px;
+		word-wrap: break-word;
+		white-space: normal;
+	}
+	#tier-lists-results td:nth-child(2),
+		#tier-lists-results td:nth-child(3),
+			#tier-lists-results td:nth-child(4) { border-left: 0; }
+
+#tier-lists-results-prev { float: left; }
+#tier-lists-results-next { float: right; }
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+	#tier-lists-results { font-size: 10px; }
+		#tier-lists-results th:first-child { width: 25%; }
+		#tier-lists-results th:nth-child(2),
+		#tier-lists-results th:nth-child(3),
+		#tier-lists-results th:nth-child(4) { width: 25%; }
+}
